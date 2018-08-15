@@ -8,4 +8,4 @@ class SymbolSerializer(serializers.ModelSerializer):
     class Meta:
         model = Symbol
 
-        fields = ('id', 'name', 'description', 'image',)
+        fields = ('id', 'name', 'description', 'public', 'image',)

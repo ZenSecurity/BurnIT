@@ -8,6 +8,7 @@ from django.db import models
 class Symbol(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
+    public = models.BooleanField(default=True)
     image = models.ImageField()
 
     def __unicode__(self):
