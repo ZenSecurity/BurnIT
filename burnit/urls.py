@@ -17,16 +17,22 @@ from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView
 from rest_framework.routers import DefaultRouter
 from gallery.views import SymbolViewSet
 from poll.views import UserViewSet, PollViewSet
 
 api_router = DefaultRouter()
-api_router.register(r'gallery', SymbolViewSet, 'gallery')
-api_router.register(r'user', UserViewSet, 'user')
-api_router.register(r'poll', PollViewSet, 'poll')
+api_router.register(r'gallery', SymbolViewSet)
+api_router.register(r'user', UserViewSet)
+api_router.register(r'poll', PollViewSet)
+
 
 urlpatterns = [
+    url(r'^$', TemplateView.as_view(template_name='frontend/index.html')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(api_router.urls, namespace='api')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
