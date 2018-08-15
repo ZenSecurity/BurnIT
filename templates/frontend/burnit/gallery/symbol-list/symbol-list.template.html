@@ -1,7 +1,5 @@
-<div class="container-fluid h-100">
-    <div class="row h-100" ng-repeat="symbol in $ctrl.symbols">
-        <img ng-src="{{ symbol.image }}">
-        <h1>{{ symbol.name }}</h1>
-        <p>{{ symbol.description }}</p>
-    </div>
+<div class="row h-100" ng-repeat="symbol in $ctrl.symbols">
+    <img ng-src="{{ symbol.image }}">
+    <h3>{{ symbol.name }}</h3>
+    <p>{{ symbol.description }}</p>
 </div>
