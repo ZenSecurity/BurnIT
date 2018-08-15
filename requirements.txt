@@ -1,0 +1,6 @@
+setuptools
+django
+django-rest-framework
+pillow
+ipython
+isort
