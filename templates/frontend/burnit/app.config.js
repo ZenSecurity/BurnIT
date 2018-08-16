@@ -8,8 +8,8 @@ angular.
         when('/symbol-list', {
           template: '<symbol-list></symbol-list>'
         }).
-        when('/phones1', {
-          template: 'world'
+        when('/symbol-description', {
+          template: '<symbol-description></symbol-description>'
         }).
         otherwise('/symbol-list');
     }

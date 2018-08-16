@@ -16,13 +16,12 @@
         <script src="static/frontend/burnit/gallery/gallery.module.js"></script>
         <script src="static/frontend/burnit/gallery/symbol-list/symbol-list.module.js"></script>
         <script src="static/frontend/burnit/gallery/symbol-list/symbol-list.component.js"></script>
+	<script src="static/frontend/burnit/gallery/symbol-description/symbol-description.module.js"></script>
+	<script src="static/frontend/burnit/gallery/symbol-description/symbol-description.component.js"></script>
     </head>
     <body>
-        <h1 class="text-center">Burn IT</h1>
-        <div class="container-fluid h-100">
-                <symbol-list>
-                </symbol-list>
-        </div>
+        <h1 class="text-center">Burn <span class="text-danger">IT</span></h1>
+	<div ng-view></div>
     </body>
 </html>
 {% endverbatim %}

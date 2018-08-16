@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('gallery', [
-  'symbolList'
+  'symbolList',
+  'symbolDescription'
 ]);

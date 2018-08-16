@@ -1,5 +1,5 @@
 .symbol-preview:hover {
-    border: 1px solid darkgray;
+    border: 1px solid #dc3545;
 }
 .symbol-preview {
     border: 1px solid white;
