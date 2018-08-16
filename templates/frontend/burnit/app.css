@@ -1,3 +1,6 @@
-img:hover {
+.symbol-preview:hover {
     border: 1px solid darkgray;
+}
+.symbol-preview {
+    border: 1px solid white;
 }
