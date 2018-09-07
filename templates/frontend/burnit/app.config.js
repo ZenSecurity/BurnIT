@@ -2,15 +2,16 @@
 
 angular.
   module('burnItApp').
-  config(['$locationProvider', '$routeProvider',
-    function config($locationProvider, $routeProvider) {
+  config(['$locationProvider', '$routeProvider', '$httpProvider', function($locationProvider, $routeProvider, $httpProvider) {
       $routeProvider.
-        when('/symbol-list', {
+        when('/symbols', {
           template: '<symbol-list></symbol-list>'
         }).
-        when('/symbol-description', {
-          template: '<symbol-description></symbol-description>'
+        when('/symbol/:symbolId', {
+          template: '<symbol-detail></symbol-detail>'
         }).
-        otherwise('/symbol-list');
-    }
-  ]);
+        otherwise('/symbols');
+
+       $httpProvider.defaults.xsrfCookieName = 'csrftoken';
+       $httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+    }]);

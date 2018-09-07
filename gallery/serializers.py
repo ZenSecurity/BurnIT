@@ -9,3 +9,4 @@ class SymbolSerializer(serializers.ModelSerializer):
         model = Symbol
 
         fields = ('id', 'name', 'description', 'public', 'image',)
+        read_only_fields = ('name', 'description', 'public', 'image',)

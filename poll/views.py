@@ -7,7 +7,6 @@ from .models import User, Vote
 
 # Create your views here.
 
-
 class UserViewSet(viewsets.GenericViewSet,
                   mixins.CreateModelMixin,
                   mixins.RetrieveModelMixin,
@@ -16,6 +15,9 @@ class UserViewSet(viewsets.GenericViewSet,
     queryset = User.objects.all()
 
 
-class PollViewSet(viewsets.ReadOnlyModelViewSet):
+class PollViewSet(viewsets.GenericViewSet,
+                  mixins.CreateModelMixin,
+                  mixins.RetrieveModelMixin,
+                  mixins.ListModelMixin):
     serializer_class = VoteSerializer
     queryset = Vote.objects.all()

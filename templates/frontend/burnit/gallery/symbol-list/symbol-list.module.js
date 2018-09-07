@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('symbolList', []);
+angular.module('symbolList', ['ngResource', 'symbol']);

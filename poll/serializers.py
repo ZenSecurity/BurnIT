@@ -20,3 +20,9 @@ class VoteSerializer(serializers.HyperlinkedModelSerializer):
         model = Vote
 
         fields = ('id', 'user', 'symbol', 'created',)
+        read_only_fields = ('id', 'created',)
+        write_only_fields =  ('user', 'symbol',)
+
+    def create(self, validated_data):
+        print(validated_data)
+        #user_data = validated_data.pop('user')

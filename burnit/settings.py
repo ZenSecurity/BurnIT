@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -130,3 +131,6 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploaded')
 MEDIA_URL = '/uploaded/'
+
+
+# Django Rest Framework Stuff

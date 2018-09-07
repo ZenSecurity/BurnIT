@@ -1,0 +1,21 @@
+<div class="container-fluid h-100">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+	    <img class="img-responsive" src="{{$ctrl.symbol.image}}">
+	    <h2>{{$ctrl.symbol.name}}</h2>
+            <p class="align-center">{{$ctrl.symbol.description}}</p>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <a class="btn btn-outline-secondary" type="button" href="#">Back</a>
+                </div>
+	        <input type="text" class="form-control" placeholder="Name and Surname" ng-model="$ctrl.name">
+	        <div class="input-group-append" type="button">
+                    <button type="button" class="btn btn-danger" ng-click="$ctrl.burn()">Burn</button>
+                </div>
+            </div>
+	</div>
+	<div class="coll-4"></div>
+    </div>
+</div>
+

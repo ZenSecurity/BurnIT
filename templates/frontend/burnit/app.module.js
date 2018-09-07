@@ -2,6 +2,6 @@
 
 angular.module('burnItApp', [
   'gallery',
-  'poll',
+  //'poll',
   'ngRoute'
 ]);
